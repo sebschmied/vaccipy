@@ -531,7 +531,7 @@ class ImpfterminService():
                     self.log.success(f"{num}. Termin: {ts}")
                 if ENABLE_BEEPY:
                     beepy.beep('coin')
-                else
+                else:
                     print("\a")
                 return True, 200
             else:
