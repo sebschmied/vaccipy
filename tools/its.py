@@ -26,6 +26,7 @@ try:
 except ImportError:
     ENABLE_BEEPY = False
 
+
 class ImpfterminService():
     def __init__(self, code: str, plz_impfzentren: list, kontakt: dict,PATH:str):
         self.code = str(code).upper()
@@ -530,6 +531,8 @@ class ImpfterminService():
                     self.log.success(f"{num}. Termin: {ts}")
                 if ENABLE_BEEPY:
                     beepy.beep('coin')
+                else
+                    print("\a")
                 return True, 200
             else:
                 self.log.info(f"Keine Termine verfügbar in {plz}")
