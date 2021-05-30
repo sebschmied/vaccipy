@@ -14,7 +14,8 @@ Automatisierte Impfterminbuchung auf [www.impfterminservice.de](https://www.impf
 * Automatisches Suchen und Buchen von Impfterminen
 * Suche bei mehreren Impfzentren gleichzeitig
 * Warteschlange umgehen
-* Dauerhaft Impf-Code's generieren - egal wo, egal für wen!
+* Dauerhaft Impf-Codes generieren - egal wo, egal für wen!
+* 🌟 **NEU:** [Jetzt mit GUI im Pre-Release! (Nur für Windows)](https://github.com/iamnotturner/vaccipy/releases/tag/v1.0.5) 
 
 **[Wusstest du: Du kannst mit einem Impf-Code in mehreren Impfzentren gleichzeitig nach freien Terminen suchen!](https://github.com/iamnotturner/vaccipy/wiki/Ein-Code-fuer-mehrere-Impfzentren)**
 
@@ -25,21 +26,26 @@ Automatisierte Impfterminbuchung auf [www.impfterminservice.de](https://www.impf
 
 Download neuste Version:
 
-<a href="https://cntr.click/rS9Ds4R">
+<a href="https://github.com/iamnotturner/vaccipy/releases/latest/download/vaccipy_installer.exe">
 <img width="60" height="50" src="https://upload.wikimedia.org/wikipedia/de/thumb/c/c2/Microsoft_Windows_7_logo.svg/2000px-Microsoft_Windows_7_logo.svg.png">
 </a>
-<a href="https://cntr.click/mN1MPzc">
+
+<a href="https://github.com/iamnotturner/vaccipy/releases/latest/download/vaccipy-ubuntu.zip">
 <img width="90" heigth="30" src=https://logos-world.net/wp-content/uploads/2020/11/Ubuntu-Emblem.png>
 </a></br></br>
 
+#### Probleme beim Ausführen des Windows-Installers?
+[Hier kannst du dir das Projekt komprimiert als `.zip` herunterladen.](https://github.com/iamnotturner/vaccipy/releases/latest/download/vaccipy-windows.zip)
+
+#### Releases
+
+[Hier findest du den neusten Release.](https://github.com/iamnotturner/vaccipy/releases/latest)  
+Mehr Informationen, wie die Releases funktionieren findest du [hier](https://github.com/iamnotturner/vaccipy/blob/master/docs/distribution.md).
 
 #### BETA Version
 
-Der BETA-Branch enthält neue, noch nicht final getestete Features. [Sollten Fehler auftreten könnt ihr hier ein Issue erstellen.](https://github.com/iamnotturner/vaccipy/issues)  
+Der [BETA-Branch](https://github.com/iamnotturner/vaccipy/tree/beta) enthält neue, noch nicht final getestete Features. Hierfür gibt es keine Distribution für Windows oder Ubuntu. [Sollten Fehler auftreten könnt ihr hier ein Issue erstellen.](https://github.com/iamnotturner/vaccipy/issues)  
 
-## Releases
-[Link zum neusten Release](https://github.com/iamnotturner/vaccipy/releases/latest)  
-Mehr Informationen, wie die Releases funktionieren findest du [hier](https://github.com/iamnotturner/vaccipy/blob/master/docs/distribution.md).
 
 ## Ausgangssituation
 
@@ -53,7 +59,6 @@ andererseits hat man aber auch keine Lust, deshalb nun den ganzen Tag vor dem Co
 Zunächst trägst du deinen "Impf-Code" (*Beispiel: A1B2-C3D4-E5F6*), die PLZ deines Impfzentrums 
 und deine Daten (Anschrift, Telefon, Mail) ein, die bei der Terminbuchung angegeben werden sollen.
 Du wirst zur Eingabe aufgefordert und deine Daten werden in der Datei `./data/kontaktdaten.json` gespeichert.
-
 
 Nachfolgend werden die zwei Grundfunktionalitäten von `vaccipy` kurz beschrieben.
 
@@ -80,7 +85,7 @@ Die folgenden Daten werden beim Programmstart benötigt:
 
 `vaccipy` übernimmt für dich die Suche und Buchung eines Impftermin auf [www.impfterminservice.de](https://www.impfterminservice.de/).
 Dazu musst du deinen Impf-Code, die PLZ's deiner gewählten Impfzentren und deine Daten beim Start des Tools eintragen. Anschließend beginnt `vaccipy` 
-die Suche und frägt in regelmäßigen Abständen (alle 60 Sekunden) verfügbare Termine in den gewählten Impfzentren ab.
+die Suche und fragt in regelmäßigen Abständen (alle 60 Sekunden) verfügbare Termine in den gewählten Impfzentren ab.
 
 Sobald ein Termin verfügbar ist, wird dieser direkt mit den Anfangs eingegeben Daten gebucht und die Suche beendet.
 Nach erfolgreicher Buchung erhälst du eine Bestätigungsmail vom Impfterminservice und kannst die Termine auch direkt unter [www.impfterminservice.de](https://www.impfterminservice.de/) einsehen (Bundesland wählen > Impfzentrum wählen > Buchung verwalten).
@@ -102,19 +107,17 @@ Die folgenden Daten werden beim Programmstart benötigt:
 #### Ablauf
 
 `vaccipy` kann neben der Terminbuchung dir auch einen Impf-Code generieren - dauerhaft, für jede Person, in jedem Impfzentrum. 
-Dazu musst du deine Mailadresse, deine Telefonnummer und die PLZ des gewünschten Impfzentrums eintragen. Anschließend frägt `vaccipy` einen Impf-Code
+Dazu musst du deine Mailadresse, deine Telefonnummer und die PLZ des gewünschten Impfzentrums eintragen. Anschließend fragt `vaccipy` einen Impf-Code
 an und du erhälst eine SMS mit einem Bestätigungscode. Diesen Bestätigungscode kannst du anschließend im Tool eintragen. Der Impf-Code wird dir 
 anschließend per Mail zugesendet.
 
 > Es ist wichtig, dass du den Code entsprechend deiner Altersgruppe auswählst, ansonsten wird dir der Termin vor Ort abgesagt.
 > Der Code wird auf [www.impfterminservice.de](https://www.impfterminservice.de/) generiert und ist gültig.
 
-
 ## Was passiert mit meinen Daten?
 
 Deine Daten werden **lokal**, also nur bei dir auf dem Computer, in der Datei `./kontaktdaten.json` gespeichert.
 Beim nächsten Start kannst du deine Daten direkt laden und musst sie nicht erneut eintragen.
-
 
 ## Workflow
 
@@ -137,9 +140,7 @@ Beim nächsten Start kannst du deine Daten direkt laden und musst sie nicht erne
 
 > Das Einloggen im Script erfolgt lediglich, um eine Übersicht über die zugewiesenen Impfstoffe zu erhalten.
 > Sollte der Login mal nicht klappen, ist das nicht weiter tragisch. Die Terminsuche kann fortgesetzt werden.
-
-
-
+>
 > Die nachkommenden Schritte erfolgen im Loop. Alle 60 Sekunden werden verfügbare Termine abgerufen und, 
 > sollten Termine verfügbar sein, ~~der erstbeste~~ ein zufälliger ausgewählt. 
 > 
@@ -159,7 +160,6 @@ Beim nächsten Start kannst du deine Daten direkt laden und musst sie nicht erne
 > **Achtung! Im nächsten Schritt wird ein verbindlicher Impftermin gebucht!**
 
 7) Buchen des Impftermins
-
 
 ## Termin gebucht, was nun?
 
@@ -183,7 +183,16 @@ Die notwendigen Python-Module können mittels pip installiert werden.
 pip3 install -r requirements.txt
 ```
 
+#### Developer Collaboration
+
+Für direkte Kommunikation kannst du als Entwickler gerne unserem Slack beitreten!
+
+<a href="https://join.slack.com/t/vaccipy/shared_invite/zt-qt5ympiu-j7P86E2U0yM3shqoNSoqyg">
+<img width="50" heigth="50" src=https://cdn.pling.com/img/5/f/a/f/e20d4a4b5d23357c5ace1844206c6b02e082e73231a16f9036cb8e3bf109d52816bd.png>
+</a>
+
 ## Ausführung unter Windows
+
 1) [`vaccipy` downloaden](#Downloads)
 2) .zip Ordner entpacken
 3) Im `windows-terminservice\`-Ordner die `windows-terminservice.exe` ausführen. 
@@ -196,7 +205,8 @@ pip3 install -r requirements.txt
 > 
 > "[...] Um das Tool dann zum Laufen zu bringen, könntest du zum Beispiel eine [Ausnahme in den Windows-Sicherheiteinstellungen hinzufügen.](https://support.microsoft.com/de-de/windows/hinzufügen-eines-ausschlusses-zu-windows-sicherheit-811816c0-4dfd-af4a-47e4-c301afe13b26)"
 
-## Ausführung unter Linux 
+## Ausführung unter Linux
+
 1) [`vaccipy` downloaden](#Downloads)
 2) .zip Ordner entpacken
 3) Eventuell notwendig: Die Terminservice- und Driver-Executable ausführbar machen.
@@ -246,21 +256,28 @@ python3 main.py search -f max-mustermann.json
 ### Optionale Umgebungsvariablen
 
 * `VACCIPY_CHROMEDRIVER`:
-  Name oder relativer Pfad der chromedriver Programmdatei, die du verwenden möchtest.
-  Dies kann verwendet werden, falls du deine eigene chromedriver-Installation verwenden möchtest
-  und wird z. B. auf NixOS benötigt.
-  Beispiel: `chromedriver`
-
+  Name oder relativer Pfad der einer alternativen chromedrivers Programmdatei, die du verwenden möchtest.
+  
+  Der richtige chromedriver kann durch das setzen der Umgebungsvariable geändert werden (in diesem Fall `chromium.chromedriver`):
+  
+  `export VACCIPY_CHROMEDRIVER="chromium.chromedriver"`
+  
+  Bei einer nicht aktuellen chromedriver-Version kann es zu folgender Fehlermeldung kommen:
+  
+  `[err] [renew_cookies]   WebDriverException exception raised - retry 1`
+  
+  Dies wird auch z.B. auf NixOS benötigt, um eine eigene chromedriver-Installation zu verwenden.
 
 Für eine bessere Nutzererfahrung erstellen wir verschiedene Distributionen, die ohne Installation von Python direkt ausgeführt werden können. 
 Die Distributionen können im [neusten Release heruntergeladen werden](https://github.com/iamnotturner/vaccipy/releases/latest).
+
+
+#### [Informationen zu den Distributionen und Shipping findest du hier](https://github.com/iamnotturner/vaccipy/blob/master/docs/distribution.md)
 
 ## Programmdurchlauf
 
 <img src="https://github.com/iamnotturner/vaccipy/blob/master/images/beispiel_programmdurchlauf.png">
 
-
-## [Informationen zu den Distributionen und Shipping findest du hier.](https://github.com/iamnotturner/vaccipy/blob/master/docs/distribution.md)
 
 ## Das könnte noch kommen
 
@@ -310,4 +327,3 @@ save da world. my final message. goodbye.
 <a href="https://www1.wdr.de/nachrichten/themen/coronavirus/impftermine-online-buchen-100.html">
 <img width=100 src=https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/WDR_Dachmarke.svg/2000px-WDR_Dachmarke.svg.png>
 </a>
-
